@@ -1,17 +1,23 @@
 import React from 'react'
 import {read} from "../../JS/actions/hotels"
+import {useSelector} from'react-redux'
 import {useStore} from 'react-redux'
 import {useState,useEffect} from "react"
 import {diffDays} from '../../JS/actions/hotels'
 import {moment} from 'moment'
 
-//state to store  one hotel as response :
 
 
+// const {option}=Select;
 
-const ViewHotel=({match})=>{
+const ViewHotel=({match,history})=>{
+//state to store  one hotel as response :    
 const[hotel,setHotel]=useState({})
 const [image,setImage]=useState("")
+
+const {auth}= useSelector((state)=>({...state}));
+// const {token}=auth
+
 useEffect(()=>{
     loadSellerHotel()
     },[]);
@@ -27,7 +33,7 @@ useEffect(()=>{
     const handleClick= (e)=>{
       e.preventDefault()
       if (!auth) history.push('/login')
-      console.log(object)
+    
 
     }
 
@@ -57,7 +63,7 @@ useEffect(()=>{
                   {/* <p>From<br/>{" "}{moment(new Date(hotel.from))}</p> */}
                   {/* <p>To <br/>{" "}{moment(new Date(hotel.to)).format("MMMM Do YYYY ,h:mm:ss a")}</p> */}
 
-               <button className="btn btn-block btn-lg btn-primary mt-3">
+               <button onClick={handleClick} className="btn btn-block btn-lg btn-primary mt-3">
                    {auth && auth.token? "Book Now" :"Login to Book"}
                    </button>
                     

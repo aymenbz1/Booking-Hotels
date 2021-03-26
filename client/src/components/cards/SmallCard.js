@@ -45,7 +45,7 @@ return(
                   })}
               </span>{" "}
               </h3> 
-              {/* <p className="alert alert-info">{h.location}</p> */}
+              <p className="alert alert-info">{h.location}</p>
               <p className="card-text">{`${h.content.substring(1,150)}...`}</p>
               
               <p className='card-text'>

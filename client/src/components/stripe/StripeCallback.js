@@ -3,6 +3,8 @@ import {useEffect} from "react"
 import {useSelector,useDispatch} from 'react-redux'
 import { updateUserInLocalStorage } from "../../JS/actions/auth"
 import {getAccountStatus} from '../../JS/actions/stripe'
+
+
 const StripeCallback =({history})=>{
 //get auth from the state :
 const {auth}=useSelector((state)=>({...state}))

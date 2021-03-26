@@ -10,12 +10,13 @@ const Login=({history})=>{
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
 const dispatch = useDispatch();
+
 const handleSubmit=async(e)=>{
         e.preventDefault();
         console.log("send LOGIN DATA" ,{email,password})
         try{
             let res= await login({email,password})
-            console.log('Login response',res)
+            // console.log('Login response',res)
             if (res.data){
                 console.log("Save User in redux")
                 console.log(res.data)

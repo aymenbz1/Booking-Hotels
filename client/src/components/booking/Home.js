@@ -1,6 +1,7 @@
 import {allHotels} from '../../JS/actions/hotels'
 import {useState,useEffect} from 'react'
 import SmallCard from '../cards/SmallCard'
+import Search from '../HotelForm/Search'
 
 const Home = () => {
 //   const { user } = useSelector((state) => ({ ...state }));
@@ -18,6 +19,10 @@ const loadAllhotels=async()=>{
 
   return (
     <>
+    <div className="col">
+      <br/>
+      <Search/>
+    </div>
     <div className="container-fluid h1 bg-secondary p-5 text-center">
     <h1>All Hotels</h1>
     </div> 

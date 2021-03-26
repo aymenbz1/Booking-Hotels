@@ -43,3 +43,7 @@ await axios.put(`${process.env.REACT_APP_API}/update-hotel/${hotelId}`,data,
     authorization:`Bearer ${token}`,
 }
 })
+
+//get search query contain information bed location ...
+export const searchListings =async(query)=>
+await axios.post(`${process.env.REACT_APP_API}/search-listings`,query);

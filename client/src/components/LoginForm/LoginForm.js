@@ -6,6 +6,7 @@ const LoginForm = ({handleSubmit,email,setEmail,password,setPassword}) => (
         <form onSubmit={handleSubmit} className="mt-3">
            
         <div className="form-group mb-3">
+                
         <label className="form-label">Email adress</label>
         <input type="text" 
         className="form-control" 

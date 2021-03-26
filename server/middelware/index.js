@@ -1,5 +1,7 @@
 import expressJwt from 'express-jwt'
 import Hotel from '../models/hotel'
+
+//express jwt authentificate  middelware 
 export const requireSignin=expressJwt({
     
        secret:process.env.JWT_SECRET,

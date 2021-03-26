@@ -1,5 +1,6 @@
 import express from 'express';
 import formidable from 'express-formidable'
+import { searchListings } from '../../client/src/JS/actions/hotels';
 const router=express.Router();
 
 //controller:
@@ -15,4 +16,5 @@ router.get('/seller-hotels',requireSignin,sellerHotels)
 router.delete('/delete-hotel/:hotelId',requireSignin,hotelOwner,remove)
 router.get("/hotel/:hotelId",read)
 router.put("/update-hotel/:hotelId",requireSignin,hotelOwner,formidable(),update)
+router.post("/search-listings",searchListings)
  module.exports=router; 

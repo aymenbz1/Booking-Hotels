@@ -2,7 +2,7 @@ import {allHotels} from '../../JS/actions/hotels'
 import {useState,useEffect} from 'react'
 import SmallCard from '../cards/SmallCard'
 import Search from '../HotelForm/Search'
-
+import './home.css'
 const Home = () => {
 //   const { user } = useSelector((state) => ({ ...state }));
 
@@ -23,8 +23,8 @@ const loadAllhotels=async()=>{
       <br/>
       <Search/>
     </div>
-    <div className="container-fluid h1 bg-secondary p-5 text-center">
-    <h1>All Hotels</h1>
+    <div className=" aymen container-fluid h1 p-5 text-center">
+    <h1>Find the perfect hotel and choose your destination</h1>
     </div> 
     <div className="container-fluid">
       {/* <pre>{JSON.stringify(hotels,null,4)}</pre> */}

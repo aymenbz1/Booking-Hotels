@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom"
 import {useSelector,useDispatch} from 'react-redux'
 import {useHistory} from 'react-router-dom'
-
+import './TopNav.css'
 
 
 
@@ -21,7 +21,7 @@ history.push('/login');
 
 
     return(
-   <div class="nav bg-light d-flex justify-content-between">
+   <div class="nav d-flex justify-content-between">
     <Link class="nav-link" to="/">Home</Link>
 
     {auth!==null && (   

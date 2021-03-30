@@ -64,6 +64,7 @@ placeholder="Number of beds"
    <SearchOutlined 
    onClick={handleSubmit} 
    className="btn btn-primary p-3 btn-square" 
+   
    />     
     </div>
 );

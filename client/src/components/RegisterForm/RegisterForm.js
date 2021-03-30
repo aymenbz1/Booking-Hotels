@@ -16,7 +16,7 @@ const RegisterForm=({handleSubmit,name,setName,email,setEmail,password,setPasswo
     
     <div className="form-group mb-3">
     <label className="form-label">Email adress</label>
-    <input type="text" 
+    <input type="email" 
     className="form-control" 
     placeholder="Enter email" 
     value={email} 
@@ -25,7 +25,7 @@ const RegisterForm=({handleSubmit,name,setName,email,setEmail,password,setPasswo
     
     <div className="form-group mb-3">
     <label className="form-label">Password</label>
-    <input type="text" 
+    <input type="password" 
     className="form-control" 
     placeholder="Enter Password" 
     value={password} 

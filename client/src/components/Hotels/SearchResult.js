@@ -17,8 +17,9 @@ const SearchResult=()=>{
 //change when we change location search :
 useEffect(()=>{
     const {location,date,bed}=queryString.parse (window.location.search)
-    console.table({location,date,bed})
+    // console.table({location,date,bed})
     searchListings({location,date,bed}).then((res)=>{
+        console.log("Search aymen===>",res.data)
     setHotels (res.data) 
     })
 

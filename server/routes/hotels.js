@@ -1,10 +1,10 @@
 import express from 'express';
 import formidable from 'express-formidable'
-import { searchListings } from '../../client/src/JS/actions/hotels';
+
 const router=express.Router();
 
 //controller:
-import {create,hotels,image,sellerHotels,remove,read,update} from "../controllers/hotel"
+import {create,hotels,image,sellerHotels,remove,read,update,searchListings } from "../controllers/hotel"
 //middleware :
 import {requireSignin,hotelOwner} from "../middelware/index"
 

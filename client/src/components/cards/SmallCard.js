@@ -39,12 +39,14 @@ return(
           <div className="card-body">
               <h3 className="card-title">{h.title}{" "}
               <span className="float-right text-primary">
-                  {currencyFormatter({
+                  {/* {currencyFormatter({
                     amount:h.price,
                     currency:'usd'
-                  })}
+                  })} */}
+                 <p>{h.price}$</p>
               </span>{" "}
               </h3> 
+
               <p className="alert alert-info">{h.location}</p>
               <p className="card-text">{`${h.content.substring(1,150)}...`}</p>
               
@@ -55,7 +57,7 @@ return(
                   </span>
                   </p>
 
-               <p className='card-text'>{h.bed}</p>   
+               <p className='card-text'><b>{h.bed} beds</b></p>   
                <p className='card-text'>Available from {new Date(h.from).toLocaleDateString()}</p>
                
             <div className="d-flex justify-content-between h4">

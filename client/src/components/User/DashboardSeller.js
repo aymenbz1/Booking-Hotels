@@ -8,6 +8,9 @@ import { HomeOutlined } from '@ant-design/icons'
 import{createConnectAccount} from "../../JS/actions/stripe"
 import {sellerHotels,deleteHotel} from '../../JS/actions/hotels'
 import SmallCard from "../cards/SmallCard"
+import './dashboard.css'
+
+
 const DashboardSeller = () => {
  const {auth}=useSelector((state)=>({...state}));
  //Loading setup stripe button process :
@@ -97,7 +100,7 @@ const handleHotelDelete=async(hotelId)=>{
     )
     return (
       <>
-        <div className="container-fluid bg-secondary p-5">
+        <div className="aym container-fluid  p-4">
           <ConnectNav/>
         </div>
 

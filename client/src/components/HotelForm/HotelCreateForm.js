@@ -36,7 +36,8 @@ const HotelCreateForm=(props)=>{
              name="image" 
              onChange={handleImageChange} 
              accept="image/*" 
-             hidden
+            //  hidden
+            
              />
           </label>
        

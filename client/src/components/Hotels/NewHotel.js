@@ -4,7 +4,7 @@ import {DatePicker,Select} from'antd';
 import {createHotel} from '../../JS/actions/hotels'
 import {useSelector} from 'react-redux'
 import HotelCreateForm from '../HotelForm/HotelCreateForm'
-
+import './NewHotel.css'
 
 const {option}=Select
 const config={
@@ -59,7 +59,7 @@ toast('New hotel is posted ')
 //data will be empty after that time when we get response :
 setTimeout(()=>{
   window.location.reload();
-},1000);
+},2000);
 }
 catch (err){
   console.log(err);
@@ -84,7 +84,7 @@ const handleChange=(e)=>{
 
       return (
         <>
-        <div className="container-fluid bg-secondary p-5 text-center">
+        <div className="add container-fluid  p-5 text-center">
         <h2>Add Hotel</h2>
         </div> 
         <div className="container-fluid">
@@ -101,8 +101,9 @@ const handleChange=(e)=>{
           //  setLocation={SetLocation}
            />
            <div className="col-md-2">
-             <img src={preview} alt='preview_image'className="img img-fluid m-2"/>
-             <pre>{JSON.stringify(values)}</pre></div>
+             {/* <img src={preview} alt='preview_image'className="img img-fluid m-2"/> */}
+             {/* <pre>{JSON.stringify(values)}</pre> */}
+             </div>
            </div>
           </div>
         </div>

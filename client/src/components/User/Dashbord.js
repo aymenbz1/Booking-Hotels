@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 const Dashboard = () => {
     return (
       <>
-        <div className="container-fluid bg-secondary p-5">
+        <div className="aym container-fluid p-4">
         <ConnectNav/>
         </div>
 

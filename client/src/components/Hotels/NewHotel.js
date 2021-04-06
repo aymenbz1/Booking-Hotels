@@ -83,7 +83,7 @@ const handleChange=(e)=>{
 
 
       return (
-        <>
+        <div className='form'>
         <div className="add container-fluid  p-5 text-center">
         <h2>Add Hotel</h2>
         </div> 
@@ -107,7 +107,7 @@ const handleChange=(e)=>{
            </div>
           </div>
         </div>
-        </>
+        </div>
       );
     };
     

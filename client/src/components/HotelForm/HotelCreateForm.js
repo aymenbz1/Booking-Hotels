@@ -27,6 +27,7 @@ const HotelCreateForm=(props)=>{
      setLocation
     }=props;
  const {title,content,price}=values;
+ 
       return (
         <form onSubmit={handleSubmit}>
         <div className="form-group">

@@ -18,7 +18,7 @@ import StripeCallback from "./components/stripe/StripeCallback"
 import EditHotel from './components/Hotels/EditHotel'
 import ViewHotel from './components/Hotels/ViewHotel'
 import SearchResult from './components/Hotels/SearchResult'
-
+import Reservation from './components/Hotels/Reservation'
 function App() {
 
   return (
@@ -36,6 +36,7 @@ function App() {
      <PrivateRoute exact path="/hotel/edit/:hotelId" component={EditHotel}/>
      <Route exact path="/hotel/:hotelId" component={ViewHotel}/>
      <Route exact path="/search-result" component={SearchResult}/>
+     <Route exact path="/booking" component={Reservation}/>
      </Switch>
     </BrowserRouter>
   );

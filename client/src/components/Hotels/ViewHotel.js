@@ -5,7 +5,8 @@ import {useStore} from 'react-redux'
 import {useState,useEffect} from "react"
 import {diffDays} from '../../JS/actions/hotels'
 import {moment} from 'moment'
-
+import Reservation from './Reservation'
+import './ViewHotel.css'
 
 
 // const {option}=Select;
@@ -33,41 +34,46 @@ useEffect(()=>{
     const handleClick= (e)=>{
       e.preventDefault()
       if (!auth) history.push('/login')
-    
-
+       history.push('/booking')
+       
     }
 
     return <>
-    <div className="container-fluid bg-secondary p-5 text-center">
+    <div className="name container-fluid p-5 text-center">
         <h2>{hotel.title}</h2>
     </div>
-    <div className="container-fluid">
+    <div className="cent container-fluid">
         <div className="row">
             <div className="col-md-6">
                 <br/>
-                <img src={image} alt={hotel.title} className="img img-fluid m-2"/>
+                <div className='wrap'>
 
-                <div className="container-fluid">
+                <div className='image'>
+                <img src={image} alt={hotel.title} className="img img-fluid m-2"/>
+                </div>
+
+                <div className="a container-fluid">
                     <br/>
                     <b>{hotel.content}</b>
                     <p className="alert alert-info mt-3">${hotel.price}</p>
                     </div>
-               
+
+                    </div>
                     <p className='card-text'>
-                  <span className='float-right text-primary'>
+                  {/* <span className='float-right text-primary'>
                       for {diffDays(hotel.from,hotel.to)}{""}
                       {diffDays(hotel.from,hotel.to)<=1?"day":"days"}
-                  </span>
+                  </span> */}
                   </p>
 
                   {/* <p>From<br/>{" "}{moment(new Date(hotel.from))}</p> */}
                   {/* <p>To <br/>{" "}{moment(new Date(hotel.to)).format("MMMM Do YYYY ,h:mm:ss a")}</p> */}
-
-               <button onClick={handleClick} className="btn btn-block btn-lg btn-primary mt-3">
+                <div className='btn'>
+                 <button onClick={handleClick} className="bout btn btn-block btn-lg btn-primary mt-3">
                    {auth && auth.token? "Book Now" :"Login to Book"}
                    </button>
                     
-
+                   </div>
             </div>
         </div>
     </div>
